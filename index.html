@@ -3,597 +3,250 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#090909">
-<meta name="description" content="NEGO PROMO - Social Media Marketing and Promotion Services.">
-<title>NEGO PROMO | Social Media Growth</title>
-
+<meta name="theme-color" content="#111111">
+<title>NEGO PROMO | Social Media Marketing Panel</title>
 <style>
 :root {
-  --bg: #090909;
-  --panel: #151515;
-  --yellow: #ffd400;
-  --text: #ffffff;
-  --muted: #a8a8a8;
-  --border: #292929;
+  --bg:#f4f6fa;
+  --card:#ffffff;
+  --dark:#171717;
+  --yellow:#ffcc00;
+  --text:#252936;
+  --muted:#72798a;
+  --border:#e6e9f0;
+  --green:#20a464;
 }
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  background: var(--bg);
-  color: var(--text);
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-header {
-  min-height: 72px;
-  padding: 16px 6%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid var(--border);
-  background: #0c0c0c;
-  position: sticky;
-  top: 0;
-  z-index: 10;
-}
-
-.logo {
-  color: var(--yellow);
-  font-size: 23px;
-  font-weight: 900;
-  letter-spacing: 1px;
-}
-
-.logo span {
-  color: white;
-}
-
-nav {
-  display: flex;
-  gap: 20px;
-  align-items: center;
-}
-
-nav a {
-  font-size: 13px;
-  color: #ddd;
-}
-
-nav a:hover {
-  color: var(--yellow);
-}
-
-.btn {
-  display: inline-block;
-  background: var(--yellow);
-  color: #111;
-  padding: 12px 20px;
-  border-radius: 7px;
-  font-weight: bold;
-  border: none;
-  cursor: pointer;
-  font-size: 14px;
-}
-
-.btn:hover {
-  opacity: 0.88;
-}
-
-.btn-outline {
-  border: 1px solid var(--yellow);
-  color: var(--yellow);
-  background: transparent;
-}
-
-.hero {
-  padding: 75px 6% 65px;
-  text-align: center;
-  background:
-    radial-gradient(ellipse at top, #292100 0%, #090909 62%);
-}
-
-.badge {
-  display: inline-block;
-  color: var(--yellow);
-  border: 1px solid #6c5900;
-  background: #201a00;
-  padding: 6px 13px;
-  border-radius: 30px;
-  font-size: 12px;
-  margin-bottom: 20px;
-}
-
-.hero h1 {
-  font-size: clamp(34px, 7vw, 60px);
-  line-height: 1.12;
-  max-width: 850px;
-  margin: 0 auto 20px;
-}
-
-.hero h1 span {
-  color: var(--yellow);
-}
-
-.hero p {
-  color: #bbb;
-  max-width: 590px;
-  margin: 0 auto 28px;
-  font-size: 16px;
-}
-
-.hero-buttons {
-  display: flex;
-  gap: 12px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-section {
-  padding: 55px 6%;
-}
-
-.section-heading {
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-.section-heading h2 {
-  font-size: 29px;
-  margin-bottom: 8px;
-}
-
-.section-heading h2 span {
-  color: var(--yellow);
-}
-
-.section-heading p {
-  color: var(--muted);
-  font-size: 14px;
-}
-
-.stats {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 14px;
-  max-width: 850px;
-  margin: 0 auto;
-}
-
-.stat {
-  background: var(--panel);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  padding: 22px 10px;
-  text-align: center;
-}
-
-.stat strong {
-  display: block;
-  color: var(--yellow);
-  font-size: 22px;
-}
-
-.stat small {
-  color: var(--muted);
-}
-
-.platforms {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
-}
-
-.platform {
-  background: var(--panel);
-  border: 1px solid var(--border);
-  border-radius: 13px;
-  padding: 23px 17px;
-  transition: .2s;
-}
-
-.platform:hover {
-  border-color: var(--yellow);
-  transform: translateY(-3px);
-}
-
-.platform .icon {
-  font-size: 30px;
-  margin-bottom: 8px;
-}
-
-.platform h3 {
-  font-size: 17px;
-  margin-bottom: 5px;
-}
-
-.platform p {
-  font-size: 13px;
-  color: var(--muted);
-  margin-bottom: 15px;
-}
-
-.platform a {
-  color: var(--yellow);
-  font-size: 13px;
-  font-weight: bold;
-}
-
-.services {
-  background: #0e0e0e;
-}
-
-.service-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
-}
-
-.service {
-  background: var(--panel);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  padding: 22px;
-}
-
-.service h3 {
-  margin-bottom: 8px;
-  font-size: 17px;
-}
-
-.service p {
-  color: var(--muted);
-  font-size: 13px;
-  margin-bottom: 15px;
-}
-
-.service .label {
-  color: var(--yellow);
-  font-size: 12px;
-  font-weight: bold;
-}
-
-.how-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
-}
-
-.step {
-  border: 1px solid var(--border);
-  background: var(--panel);
-  padding: 23px;
-  border-radius: 12px;
-}
-
-.step-number {
-  display: inline-flex;
-  width: 35px;
-  height: 35px;
-  border-radius: 50%;
-  align-items: center;
-  justify-content: center;
-  background: var(--yellow);
-  color: #111;
-  font-weight: bold;
-  margin-bottom: 12px;
-}
-
-.step p {
-  color: var(--muted);
-  font-size: 13px;
-  margin-top: 6px;
-}
-
-.cta {
-  text-align: center;
-  background: linear-gradient(135deg, #201a00, #101010);
-  border: 1px solid #554600;
-  border-radius: 16px;
-  padding: 38px 20px;
-}
-
-.cta h2 {
-  font-size: 28px;
-  margin-bottom: 10px;
-}
-
-.cta p {
-  color: #bbb;
-  margin-bottom: 22px;
-}
-
-footer {
-  padding: 28px 6%;
-  text-align: center;
-  border-top: 1px solid var(--border);
-  color: var(--muted);
-  font-size: 12px;
-}
-
-footer strong {
-  color: var(--yellow);
-}
-
-@media (max-width: 700px) {
-  header {
-    padding: 15px 5%;
-  }
-
-  .logo {
-    font-size: 19px;
-  }
-
-  nav {
-    gap: 10px;
-  }
-
-  nav a {
-    font-size: 11px;
-  }
-
-  nav .btn {
-    padding: 9px 10px;
-    font-size: 11px;
-  }
-
-  .hero {
-    padding: 60px 5%;
-  }
-
-  section {
-    padding: 42px 5%;
-  }
-
-  .platforms,
-  .service-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .how-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .stats {
-    gap: 8px;
-  }
-
-  .stat strong {
-    font-size: 18px;
-  }
-
-  .stat small {
-    font-size: 10px;
-  }
-}
-
-@media (max-width: 390px) {
-  nav {
-    gap: 7px;
-  }
-
-  nav a {
-    font-size: 10px;
-  }
-
-  .platforms,
-  .service-grid {
-    grid-template-columns: 1fr;
-  }
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text)}
+a{text-decoration:none;color:inherit}
+button,input,select{font:inherit}
+.topbar{background:var(--dark);color:#fff;padding:15px 5%;display:flex;justify-content:space-between;align-items:center;gap:15px}
+.brand{font-size:22px;font-weight:900;letter-spacing:.5px}
+.brand span{color:var(--yellow)}
+.top-actions{display:flex;gap:9px;align-items:center}
+.btn{border:0;border-radius:8px;padding:11px 16px;font-weight:700;cursor:pointer;display:inline-block;text-align:center}
+.btn-yellow{background:var(--yellow);color:#171717}
+.btn-outline{border:1px solid #555;color:white;background:transparent}
+.layout{display:grid;grid-template-columns:220px minmax(0,1fr);max-width:1250px;margin:24px auto;padding:0 18px;gap:22px}
+.sidebar,.card{background:var(--card);border:1px solid var(--border);border-radius:13px}
+.sidebar{padding:17px;height:max-content}
+.side-title{font-weight:800;margin:4px 8px 16px}
+.nav-item{display:block;padding:12px 11px;border-radius:8px;margin:4px 0;color:#555e70;font-weight:600}
+.nav-item.active,.nav-item:hover{background:#fff5c9;color:#252525}
+main{min-width:0}
+.welcome{background:var(--dark);color:#fff;border-radius:15px;padding:26px;margin-bottom:20px;position:relative;overflow:hidden}
+.welcome h1{margin:0 0 10px;font-size:clamp(24px,4vw,36px)}
+.welcome h1 span{color:var(--yellow)}
+.welcome p{color:#e0e0e0;line-height:1.6;max-width:590px}
+.badge{display:inline-block;background:#343434;color:var(--yellow);padding:7px 10px;border-radius:20px;font-size:12px;font-weight:800;margin-bottom:12px}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px;margin-bottom:20px}
+.stat{padding:17px}
+.stat small{color:var(--muted)}
+.stat strong{display:block;font-size:23px;margin-top:8px}
+.card{padding:20px;margin-bottom:18px}
+.card h2{font-size:19px;margin:0 0 8px}
+.muted{color:var(--muted);font-size:14px;line-height:1.6}
+.platforms{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:16px}
+.platform{border:1px solid var(--border);border-radius:10px;padding:15px 10px;text-align:center;background:#fff}
+.platform .icon{font-size:25px;display:block;margin-bottom:8px}
+.platform strong{font-size:14px}
+.platform small{display:block;color:var(--muted);margin-top:6px;font-size:12px}
+form{display:grid;gap:13px}
+label{font-weight:700;font-size:13px;display:block;margin-bottom:7px}
+input,select{width:100%;padding:13px;border:1px solid #dce0e8;border-radius:8px;background:#fff;color:#222}
+input:focus,select:focus{outline:2px solid #ffe57a;border-color:#e1b800}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.full{width:100%}
+.notice{background:#fff8d9;border:1px solid #f2e3a1;padding:13px;border-radius:9px;color:#5e5015;font-size:13px;line-height:1.6}
+.hidden{display:none!important}
+.service-list{display:grid;gap:10px;margin-top:14px}
+.service-row{display:flex;justify-content:space-between;gap:12px;align-items:center;border:1px solid var(--border);padding:13px;border-radius:9px}
+.service-row span{font-size:13px;color:var(--muted)}
+footer{text-align:center;padding:25px 15px;color:var(--muted);font-size:13px}
+.whatsapp{position:fixed;right:17px;bottom:18px;background:#20b968;color:white;padding:14px 17px;border-radius:30px;font-weight:800;box-shadow:0 5px 18px #0002;z-index:5}
+.mobile-menu{display:none}
+@media(max-width:760px){
+ .topbar{padding:14px 16px}.brand{font-size:19px}
+ .top-actions .btn{padding:9px 11px;font-size:12px}
+ .layout{display:block;margin:14px auto;padding:0 12px}
+ .sidebar{display:none;margin-bottom:14px}
+ .sidebar.show{display:block}
+ .mobile-menu{display:inline-block}
+ .grid{grid-template-columns:1fr 1fr}
+ .platforms{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .welcome{padding:21px}
+ .card{padding:16px}
+ .form-row{grid-template-columns:1fr}
 }
 </style>
 </head>
-
 <body>
 
-<header>
-  <a href="#" class="logo">NEGO <span>PROMO.</span></a>
-
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#platforms">Platforms</a>
-    <a href="#services">Services</a>
-    <a href="#contact" class="btn">Get Started</a>
-  </nav>
+<header class="topbar">
+  <a class="brand" href="#" onclick="showPage('home');return false">NEGO <span>PROMO</span></a>
+  <div class="top-actions">
+    <button class="btn btn-outline mobile-menu" onclick="toggleMenu()">☰ Menu</button>
+    <button class="btn btn-outline" onclick="showPage('login')">Sign In</button>
+    <button class="btn btn-yellow" onclick="showPage('register')">Register</button>
+  </div>
 </header>
 
-<main>
+<div class="layout">
+  <aside class="sidebar" id="sidebar">
+    <div class="side-title">NEGO PROMO PANEL</div>
+    <a class="nav-item active" href="#" onclick="showPage('home');return false">⌂ &nbsp; Home</a>
+    <a class="nav-item" href="#" onclick="showPage('services');return false">▤ &nbsp; Services</a>
+    <a class="nav-item" href="#" onclick="showPage('order');return false">＋ &nbsp; New Order</a>
+    <a class="nav-item" href="#" onclick="showPage('login');return false">⇥ &nbsp; Sign In</a>
+    <a class="nav-item" href="#" onclick="showPage('register');return false">♙ &nbsp; Create Account</a>
+    <a class="nav-item" href="https://wa.me/25764699734" target="_blank" rel="noopener">☏ &nbsp; WhatsApp Support</a>
+  </aside>
 
-<section class="hero" id="home">
-  <div class="badge">YOUR SOCIAL MEDIA GROWTH PARTNER</div>
+  <main>
+    <section id="page-home">
+      <div class="welcome">
+        <span class="badge">SOCIAL MEDIA MARKETING PANEL</span>
+        <h1>Grow Your Brand with <span>NEGO PROMO</span></h1>
+        <p>One place to discover social media promotion services for creators, businesses and brands. Explore our service categories and contact our team for assistance.</p>
+        <button class="btn btn-yellow" onclick="showPage('services')">Explore Services →</button>
+        <button class="btn btn-outline" onclick="showPage('register')">Create Account</button>
+      </div>
 
-  <h1>Grow Your Brand.<br><span>Reach More People.</span></h1>
+      <div class="grid">
+        <div class="card stat"><small>Platforms</small><strong>7+</strong><small>Social networks</small></div>
+        <div class="card stat"><small>Support</small><strong>WhatsApp</strong><small>Talk to our team</small></div>
+        <div class="card stat"><small>Access</small><strong>24/7</strong><small>Browse services anytime</small></div>
+      </div>
 
-  <p>
-    Discover social media promotion services designed to help
-    creators, businesses and brands reach real audiences.
-  </p>
+      <div class="card">
+        <h2>Explore Platforms</h2>
+        <p class="muted">Find promotion options for your favourite social platforms.</p>
+        <div class="platforms">
+          <div class="platform"><span class="icon">📘</span><strong>Facebook</strong><small>Page & business promotion</small></div>
+          <div class="platform"><span class="icon">🎵</span><strong>TikTok</strong><small>Creator discovery</small></div>
+          <div class="platform"><span class="icon">▶️</span><strong>YouTube</strong><small>Channel promotion</small></div>
+          <div class="platform"><span class="icon">📸</span><strong>Instagram</strong><small>Brand visibility</small></div>
+          <div class="platform"><span class="icon">✈️</span><strong>Telegram</strong><small>Community growth</small></div>
+          <div class="platform"><span class="icon">𝕏</span><strong>X</strong><small>Content discovery</small></div>
+          <div class="platform"><span class="icon">💬</span><strong>WhatsApp</strong><small>Business communication</small></div>
+          <div class="platform"><span class="icon">🌐</span><strong>More</strong><small>Ask our team</small></div>
+        </div>
+      </div>
 
-  <div class="hero-buttons">
-    <a href="#services" class="btn">Explore Services →</a>
-    <a href="#platforms" class="btn btn-outline">View Platforms</a>
-  </div>
-</section>
+      <div class="card">
+        <h2>How It Works</h2>
+        <div class="service-list">
+          <div class="service-row"><div><strong>01. Explore services</strong><br><span>Browse available promotion options.</span></div><span>→</span></div>
+          <div class="service-row"><div><strong>02. Contact our team</strong><br><span>Confirm service details and pricing.</span></div><span>→</span></div>
+          <div class="service-row"><div><strong>03. Confirm your order</strong><br><span>We will explain the next steps before payment.</span></div><span>→</span></div>
+        </div>
+      </div>
+    </section>
 
-<section>
-  <div class="stats">
-    <div class="stat">
-      <strong>Multi-Platform</strong>
-      <small>Social Media Services</small>
-    </div>
+    <section id="page-services" class="hidden">
+      <div class="card">
+        <h2>Our Services</h2>
+        <p class="muted">Contact us to confirm current availability, delivery method and price. We focus on legitimate promotion and reaching genuine audiences.</p>
+        <div class="service-list">
+          <div class="service-row"><div><strong>Facebook Promotion</strong><br><span>Promote a page, post or business.</span></div><button class="btn btn-yellow" onclick="askService('Facebook Promotion')">Enquire</button></div>
+          <div class="service-row"><div><strong>TikTok Promotion</strong><br><span>Content discovery and creator promotion.</span></div><button class="btn btn-yellow" onclick="askService('TikTok Promotion')">Enquire</button></div>
+          <div class="service-row"><div><strong>YouTube Promotion</strong><br><span>Channel and video promotion.</span></div><button class="btn btn-yellow" onclick="askService('YouTube Promotion')">Enquire</button></div>
+          <div class="service-row"><div><strong>Instagram Promotion</strong><br><span>Brand and content discovery.</span></div><button class="btn btn-yellow" onclick="askService('Instagram Promotion')">Enquire</button></div>
+          <div class="service-row"><div><strong>Telegram Community</strong><br><span>Promote a community to relevant audiences.</span></div><button class="btn btn-yellow" onclick="askService('Telegram Community Promotion')">Enquire</button></div>
+          <div class="service-row"><div><strong>Business Promotion</strong><br><span>Help your brand reach potential customers.</span></div><button class="btn btn-yellow" onclick="askService('Business Promotion')">Enquire</button></div>
+        </div>
+      </div>
+    </section>
 
-    <div class="stat">
-      <strong>24/7</strong>
-      <small>Online Service Access</small>
-    </div>
+    <section id="page-order" class="hidden">
+      <div class="card">
+        <h2>Request a New Order</h2>
+        <p class="muted">This starter version sends your request to WhatsApp for confirmation. It does not automatically charge or process orders.</p>
+        <form onsubmit="sendOrder(event)">
+          <div><label for="platform">Choose a platform</label>
+            <select id="platform" required>
+              <option value="">Select platform</option>
+              <option>Facebook</option><option>TikTok</option><option>YouTube</option>
+              <option>Instagram</option><option>Telegram</option><option>X</option><option>Business Promotion</option>
+            </select>
+          </div>
+          <div><label for="service">What do you want to promote?</label><input id="service" placeholder="Example: my video, page or business" required></div>
+          <div><label for="link">Public link to your content</label><input id="link" type="url" placeholder="https://..." required></div>
+          <div><label for="details">Order details</label><input id="details" placeholder="Tell us your goals" required></div>
+          <button class="btn btn-yellow full" type="submit">Send Request on WhatsApp</button>
+        </form>
+      </div>
+    </section>
 
-    <div class="stat">
-      <strong>Burundi 🇧🇮</strong>
-      <small>Our Starting Market</small>
-    </div>
-  </div>
-</section>
+    <section id="page-login" class="hidden">
+      <div class="card">
+        <h2>Welcome Back</h2>
+        <p class="muted">Contact support for help with account access.</p>
+        <div class="notice">Account login is not connected yet. Do not enter or send any password on this demo page.</div>
+        <p><a class="btn btn-yellow full" href="https://wa.me/25764699734?text=Hello%20NEGO%20PROMO%2C%20I%20need%20help%20with%20account%20access." target="_blank" rel="noopener">Contact Support</a></p>
+        <p class="muted">New here? <a href="#" onclick="showPage('register');return false"><strong>Create an account request</strong></a></p>
+      </div>
+    </section>
 
-<section id="platforms">
-  <div class="section-heading">
-    <h2>Choose Your <span>Platform</span></h2>
-    <p>Explore the platforms available for promotion.</p>
-  </div>
-
-  <div class="platforms">
-
-    <article class="platform">
-      <div class="icon">📘</div>
-      <h3>Facebook</h3>
-      <p>Promote business pages, posts and video content.</p>
-      <a href="#services">Explore Services →</a>
-    </article>
-
-    <article class="platform">
-      <div class="icon">🎵</div>
-      <h3>TikTok</h3>
-      <p>Promote videos and reach potential new audiences.</p>
-      <a href="#services">Explore Services →</a>
-    </article>
-
-    <article class="platform">
-      <div class="icon">▶️</div>
-      <h3>YouTube</h3>
-      <p>Promote videos and help audiences discover your channel.</p>
-      <a href="#services">Explore Services →</a>
-    </article>
-
-    <article class="platform">
-      <div class="icon">📸</div>
-      <h3>Instagram</h3>
-      <p>Promote Reels, content and your business profile.</p>
-      <a href="#services">Explore Services →</a>
-    </article>
-
-    <article class="platform">
-      <div class="icon">✈️</div>
-      <h3>Telegram</h3>
-      <p>Promote channels, communities and announcements.</p>
-      <a href="#services">Explore Services →</a>
-    </article>
-
-    <article class="platform">
-      <div class="icon">𝕏</div>
-      <h3>X</h3>
-      <p>Promote posts and increase content discovery.</p>
-      <a href="#services">Explore Services →</a>
-    </article>
-
-  </div>
-</section>
-
-<section class="services" id="services">
-  <div class="section-heading">
-    <h2>Our <span>Services</span></h2>
-    <p>Choose a promotion service that fits your goals.</p>
-  </div>
-
-  <div class="service-grid">
-
-    <article class="service">
-      <div class="label">CONTENT PROMOTION</div>
-      <h3>Video Promotion</h3>
-      <p>Help your videos reach relevant audiences through compliant promotional campaigns.</p>
-    </article>
-
-    <article class="service">
-      <div class="label">AUDIENCE GROWTH</div>
-      <h3>Creator Promotion</h3>
-      <p>Promote your creator profile to people who may be interested in your content.</p>
-    </article>
-
-    <article class="service">
-      <div class="label">BUSINESS GROWTH</div>
-      <h3>Page Promotion</h3>
-      <p>Help businesses introduce their pages and services to potential customers.</p>
-    </article>
-
-    <article class="service">
-      <div class="label">ENGAGEMENT</div>
-      <h3>Campaign Management</h3>
-      <p>Plan promotional campaigns to improve genuine audience engagement.</p>
-    </article>
-
-    <article class="service">
-      <div class="label">CREATIVE SERVICES</div>
-      <h3>Post & Poster Design</h3>
-      <p>Create promotional graphics and content for businesses and creators.</p>
-    </article>
-
-    <article class="service">
-      <div class="label">MUSIC PROMOTION</div>
-      <h3>Artist Promotion</h3>
-      <p>Help musicians promote releases and connect with potential listeners.</p>
-    </article>
-
-  </div>
-</section>
-
-<section>
-  <div class="section-heading">
-    <h2>How It <span>Works</span></h2>
-    <p>A simple process for your promotion needs.</p>
-  </div>
-
-  <div class="how-grid">
-    <article class="step">
-      <div class="step-number">1</div>
-      <h3>Choose a Service</h3>
-      <p>Select the promotional service that fits your goals.</p>
-    </article>
-
-    <article class="step">
-      <div class="step-number">2</div>
-      <h3>Submit Your Request</h3>
-      <p>Provide the public link and campaign details requested.</p>
-    </article>
-
-    <article class="step">
-      <div class="step-number">3</div>
-      <h3>Track Your Order</h3>
-      <p>Follow up with the NEGO PROMO team for service updates.</p>
-    </article>
-  </div>
-</section>
-
-<section id="contact">
-  <div class="cta">
-    <h2>Ready to Grow with <span style="color:#ffd400">NEGO PROMO?</span></h2>
-
-    <p>
-      We are building a social media promotion platform
-      for businesses, creators and brands.
-    </p>
-
-    <a class="btn"
-       href="mailto:negopromo@example.com?subject=NEGO%20PROMO%20Service%20Inquiry">
-       Contact Our Team
-    </a>
-  </div>
-</section>
-
-</main>
+    <section id="page-register" class="hidden">
+      <div class="card">
+        <h2>Create Your Account</h2>
+        <p class="muted">Send an account request to our team. Online account creation will be added when the secure account system is connected.</p>
+        <form onsubmit="registerRequest(event)">
+          <div><label for="fullname">Your name</label><input id="fullname" required placeholder="Enter your name"></div>
+          <div><label for="email">Email address (optional)</label><input id="email" type="email" placeholder="you@example.com"></div>
+          <button class="btn btn-yellow full" type="submit">Request Account via WhatsApp</button>
+        </form>
+      </div>
+    </section>
+  </main>
+</div>
 
 <footer>
-  <p><strong>NEGO PROMO</strong> — Your Growth, Our Mission.</p>
-  <p>© 2026 NEGO PROMO. All rights reserved.</p>
-  <p>Developed by It Abednego.</p>
+  <strong>NEGO PROMO</strong> · Social Media Promotion<br>
+  Contact: +257 64 699 734<br>
+  Developed by It Abednego · © <span id="year"></span>
 </footer>
 
+<a class="whatsapp" href="https://wa.me/25764699734?text=Hello%20NEGO%20PROMO%2C%20I%20need%20information%20about%20your%20services." target="_blank" rel="noopener">☏ WhatsApp</a>
+
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+
+function showPage(page){
+  document.querySelectorAll('main section').forEach(section=>section.classList.add('hidden'));
+  const target=document.getElementById('page-'+page);
+  if(target) target.classList.remove('hidden');
+  document.querySelectorAll('.nav-item').forEach(link=>link.classList.remove('active'));
+  const sidebar=document.getElementById('sidebar');
+  if(window.innerWidth<=760) sidebar.classList.remove('show');
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+function toggleMenu(){document.getElementById('sidebar').classList.toggle('show')}
+function askService(service){
+  const text='Hello NEGO PROMO, I would like to ask about: '+service;
+  window.open('https://wa.me/25764699734?text='+encodeURIComponent(text),'_blank');
+}
+function sendOrder(event){
+  event.preventDefault();
+  const platform=document.getElementById('platform').value;
+  const service=document.getElementById('service').value;
+  const link=document.getElementById('link').value;
+  const details=document.getElementById('details').value;
+  const message='NEGO PROMO ORDER REQUEST%0APlatform: '+encodeURIComponent(platform)+
+    '%0AService: '+encodeURIComponent(service)+
+    '%0ALink: '+encodeURIComponent(link)+
+    '%0ADetails: '+encodeURIComponent(details);
+  window.open('https://wa.me/25764699734?text='+message,'_blank');
+}
+function registerRequest(event){
+  event.preventDefault();
+  const name=document.getElementById('fullname').value;
+  const email=document.getElementById('email').value||'Not provided';
+  const message='Hello NEGO PROMO, I would like to request an account.%0AName: '+
+    encodeURIComponent(name)+'%0AEmail: '+encodeURIComponent(email);
+  window.open('https://wa.me/25764699734?text='+message,'_blank');
+}
+</script>
 </body>
-  </html>
+</html>

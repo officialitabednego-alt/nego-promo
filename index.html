@@ -1,543 +1,803 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#101010">
-  <title>NEGO PROMO | Social Media Promotion</title>
-  <meta name="description" content="NEGO PROMO — Social media promotion for creators and businesses.">
-  <style>
-    :root {
-      --bg: #0c0d10;
-      --panel: #17191e;
-      --yellow: #ffd43b;
-      --text: #f7f7f7;
-      --muted: #a7aab3;
-      --border: #30323a;
-      --green: #27c984;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b0b0b">
 
-    * { box-sizing: border-box; }
+<title>NEGO PROMO | Social Media Growth</title>
 
-    body {
-      margin: 0;
-      background: var(--bg);
-      color: var(--text);
-      font-family: Arial, Helvetica, sans-serif;
-      line-height: 1.6;
-    }
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
-    button, input, select, textarea { font: inherit; }
+<style>
+:root {
+  --bg: #0b0b0b;
+  --card: #171717;
+  --yellow: #ffd400;
+  --text: #ffffff;
+  --muted: #a8a8a8;
+  --border: #303030;
+}
 
-    a { color: inherit; text-decoration: none; }
+* {
+  box-sizing: border-box;
+}
 
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      background: rgba(12,13,16,.96);
-      border-bottom: 1px solid var(--border);
-      padding: 15px 5%;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 15px;
-    }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: Arial, sans-serif;
+}
 
-    .brand {
-      font-size: 22px;
-      font-weight: 900;
-      letter-spacing: 1px;
-    }
+header {
+  padding: 18px 5%;
+  background: #111;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
 
-    .brand span { color: var(--yellow); }
+.logo {
+  font-size: 23px;
+  font-weight: 900;
+  color: var(--yellow);
+}
 
-    .badge {
-      background: #29250f;
-      border: 1px solid #65531a;
-      color: var(--yellow);
-      border-radius: 30px;
-      padding: 6px 11px;
-      font-size: 12px;
-    }
+.logo span {
+  color: white;
+}
 
-    main { max-width: 1120px; margin: auto; padding: 28px 5% 60px; }
+.badge {
+  color: var(--yellow);
+  font-size: 12px;
+  border: 1px solid var(--yellow);
+  padding: 6px 10px;
+  border-radius: 20px;
+}
 
-    .hero {
-      padding: 42px 0 30px;
-      display: grid;
-      grid-template-columns: 1.4fr 1fr;
-      align-items: center;
-      gap: 25px;
-    }
+main {
+  width: 92%;
+  max-width: 1150px;
+  margin: auto;
+}
 
-    .eyebrow {
-      color: var(--yellow);
-      font-weight: bold;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      font-size: 12px;
-    }
+.hero {
+  padding: 45px 0 30px;
+}
 
-    h1 {
-      font-size: clamp(34px, 6vw, 58px);
-      line-height: 1.08;
-      margin: 12px 0;
-    }
+.hero small {
+  color: var(--yellow);
+  letter-spacing: 2px;
+  font-weight: bold;
+}
 
-    h1 span { color: var(--yellow); }
+.hero h1 {
+  font-size: clamp(34px, 6vw, 58px);
+  line-height: 1.1;
+  margin: 14px 0;
+}
 
-    .muted { color: var(--muted); }
+.hero h1 span {
+  color: var(--yellow);
+}
 
-    .hero-card, .card {
-      background: var(--panel);
-      border: 1px solid var(--border);
-      border-radius: 18px;
-      padding: 22px;
-    }
+.hero p {
+  color: var(--muted);
+  max-width: 650px;
+  line-height: 1.8;
+}
 
-    .hero-card strong { color: var(--yellow); font-size: 22px; }
+.button {
+  display: inline-block;
+  background: var(--yellow);
+  color: #111;
+  padding: 12px 18px;
+  border-radius: 9px;
+  border: none;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+}
 
-    .section-head {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: center;
-      gap: 12px;
-      margin: 28px 0 16px;
-    }
+.section-title {
+  margin: 35px 0 18px;
+  font-size: 25px;
+}
 
-    h2 { margin: 0; font-size: 25px; }
+.filters {
+  display: flex;
+  gap: 9px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
 
-    .filters {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 9px;
-      margin-bottom: 18px;
-    }
+.filter {
+  background: var(--card);
+  color: white;
+  border: 1px solid var(--border);
+  padding: 9px 13px;
+  border-radius: 25px;
+  cursor: pointer;
+}
 
-    .filter {
-      background: var(--panel);
-      color: var(--text);
-      border: 1px solid var(--border);
-      border-radius: 25px;
-      padding: 9px 14px;
-      cursor: pointer;
-    }
+.filter.active {
+  background: var(--yellow);
+  color: black;
+  border-color: var(--yellow);
+  font-weight: bold;
+}
 
-    .filter.active {
-      color: #111;
-      background: var(--yellow);
-      border-color: var(--yellow);
-      font-weight: bold;
-    }
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
 
-    .services {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 15px;
-    }
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 15px;
+  padding: 20px;
+}
 
-    .service-card {
-      background: var(--panel);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 18px;
-      display: flex;
-      flex-direction: column;
-      min-height: 210px;
-    }
+.platform-icon {
+  font-size: 31px;
+  color: var(--yellow);
+  margin-bottom: 12px;
+}
 
-    .platform {
-      font-size: 12px;
-      color: var(--yellow);
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
+.card h3 {
+  margin: 5px 0;
+}
 
-    .service-card h3 { margin: 9px 0 4px; }
+.card p {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.6;
+}
 
-    .service-card p {
-      color: var(--muted);
-      font-size: 14px;
-      flex: 1;
-    }
+.card select {
+  width: 100%;
+  background: #0c0c0c;
+  color: white;
+  border: 1px solid #444;
+  padding: 11px;
+  border-radius: 8px;
+  margin: 10px 0;
+}
 
-    .price { font-weight: bold; font-size: 19px; }
+.price {
+  font-size: 23px;
+  font-weight: bold;
+  color: var(--yellow);
+  margin: 10px 0;
+}
 
-    .btn {
-      display: inline-flex;
-      justify-content: center;
-      align-items: center;
-      border: 0;
-      border-radius: 10px;
-      padding: 12px 16px;
-      cursor: pointer;
-      font-weight: bold;
-      background: var(--yellow);
-      color: #101010;
-    }
+.card .button {
+  width: 100%;
+  text-align: center;
+}
 
-    .btn:disabled { opacity: .5; cursor: not-allowed; }
+.notice {
+  margin: 25px 0;
+  background: #201c0c;
+  border: 1px solid #665500;
+  color: #f5e9ae;
+  border-radius: 12px;
+  padding: 16px;
+  font-size: 13px;
+  line-height: 1.8;
+}
 
-    .btn-outline {
-      color: var(--text);
-      background: transparent;
-      border: 1px solid var(--border);
-    }
+.contact {
+  background: var(--card);
+  padding: 22px;
+  border-radius: 15px;
+  margin: 35px 0;
+}
 
-    .service-card .btn { margin-top: 12px; width: 100%; }
+.contact a {
+  text-decoration: none;
+}
 
-    .notice {
-      border: 1px solid #5b4d1c;
-      background: #201d12;
-      color: #f2e6b3;
-      padding: 14px;
-      border-radius: 12px;
-      font-size: 13px;
-      margin: 18px 0;
-    }
+footer {
+  text-align: center;
+  color: var(--muted);
+  padding: 25px;
+  border-top: 1px solid var(--border);
+  font-size: 13px;
+}
 
-    .status { color: var(--muted); font-size: 14px; }
+footer strong {
+  color: var(--yellow);
+}
 
-    .form-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 14px;
-    }
+@media (max-width: 850px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
 
-    label { display: block; font-size: 13px; margin-bottom: 6px; color: var(--muted); }
+@media (max-width: 520px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
 
-    input, select, textarea {
-      width: 100%;
-      padding: 12px;
-      border-radius: 9px;
-      color: var(--text);
-      background: #0f1014;
-      border: 1px solid var(--border);
-      outline: none;
-    }
+  header {
+    padding: 14px 4%;
+  }
 
-    input:focus, select:focus, textarea:focus { border-color: var(--yellow); }
-
-    .field-full { grid-column: 1 / -1; }
-
-    .hidden { display: none !important; }
-
-    footer {
-      border-top: 1px solid var(--border);
-      padding: 28px 5%;
-      text-align: center;
-      color: var(--muted);
-      font-size: 13px;
-    }
-
-    footer strong { color: var(--yellow); }
-
-    @media (max-width: 760px) {
-      .hero { grid-template-columns: 1fr; padding-top: 25px; }
-      .services { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    }
-
-    @media (max-width: 480px) {
-      .services, .form-grid { grid-template-columns: 1fr; }
-      .field-full { grid-column: auto; }
-      header { padding: 13px 4%; }
-      main { padding-left: 4%; padding-right: 4%; }
-    }
-  </style>
+  .badge {
+    font-size: 10px;
+  }
+}
+</style>
 </head>
+
 <body>
-  <header>
-    <a class="brand" href="#">NEGO <span>PROMO</span></a>
-    <span class="badge">PROMOTE YOUR BRAND</span>
-  </header>
 
-  <main>
-    <section class="hero">
-      <div>
-        <div class="eyebrow">Your growth starts here</div>
-        <h1>Promote your content.<br><span>Reach your audience.</span></h1>
-        <p class="muted">
-          Promotion services for creators, entrepreneurs and businesses.
-          Explore available services and submit an enquiry.
-        </p>
-        <a href="#services" class="btn">Explore Services</a>
-      </div>
+<header>
+  <div class="logo">
+    <i class="fa-solid fa-bolt"></i>
+    NEGO <span>PROMO</span>
+  </div>
 
-      <div class="hero-card">
-        <div class="eyebrow">NEGO PROMO</div>
-        <h2 style="margin:10px 0">Built for creators and businesses</h2>
-        <p class="muted">Choose a service that matches your goals. Availability, price and delivery details must be confirmed before an order is accepted.</p>
-        <strong>FBu · USD</strong>
-      </div>
-    </section>
+  <div class="badge">GROW YOUR BRAND</div>
+</header>
 
-    <div class="notice">
-      <strong>Important:</strong> Only services activated by the administrator will appear here.
-      An enquiry is not a confirmed order, and payment is not currently enabled.
-    </div>
+<main>
 
-    <section id="services">
-      <div class="section-head">
-        <h2>Available Services</h2>
-        <span id="service-count" class="status">Loading services…</span>
-      </div>
+<section class="hero">
+  <small>WELCOME TO NEGO PROMO</small>
 
-      <div class="filters" id="filters">
-        <button class="filter active" data-platform="All">All</button>
-        <button class="filter" data-platform="Facebook">Facebook</button>
-        <button class="filter" data-platform="TikTok">TikTok</button>
-        <button class="filter" data-platform="YouTube">YouTube</button>
-        <button class="filter" data-platform="Instagram">Instagram</button>
-        <button class="filter" data-platform="Other">Other</button>
-      </div>
+  <h1>
+    Grow Your Audience.<br>
+    <span>Promote Your Brand.</span>
+  </h1>
 
-      <div id="service-status" class="status" role="status">Connecting to the service catalogue…</div>
-      <div id="service-list" class="services"></div>
-    </section>
+  <p>
+    Discover social media promotion services for creators,
+    businesses and brands. Choose a platform, select a campaign
+    goal and contact our team to confirm your order.
+  </p>
 
-    <section id="enquiry" class="card hidden" style="margin-top:30px">
-      <div class="section-head">
-        <h2>Service Enquiry</h2>
-        <button id="close-form" class="btn btn-outline" type="button">Close</button>
-      </div>
-      <p class="muted">Submit an enquiry. We will prepare a WhatsApp message so you can discuss availability and the final price.</p>
+  <a href="#services" class="button">
+    <i class="fa-solid fa-layer-group"></i>
+    Explore Services
+  </a>
+</section>
 
-      <form id="enquiry-form">
-        <div class="form-grid">
-          <div>
-            <label for="customer-name">Your name</label>
-            <input id="customer-name" required maxlength="100" autocomplete="name">
-          </div>
-          <div>
-            <label for="customer-contact">WhatsApp or email</label>
-            <input id="customer-contact" required maxlength="150">
-          </div>
-          <div class="field-full">
-            <label for="selected-service">Selected service</label>
-            <input id="selected-service" readonly required>
-          </div>
-          <div class="field-full">
-            <label for="target-url">Public post, page or video link</label>
-            <input id="target-url" type="url" placeholder="https://…" required maxlength="2000">
-          </div>
-          <div>
-            <label for="currency">Preferred currency</label>
-            <select id="currency" required>
-              <option value="FBu">FBu</option>
-              <option value="USD">USD</option>
-            </select>
-          </div>
-          <div>
-            <label for="quantity">Quantity (if applicable)</label>
-            <input id="quantity" type="number" min="1" max="100000" value="1" required>
-          </div>
-          <div class="field-full">
-            <label for="customer-notes">What would you like to promote?</label>
-            <textarea id="customer-notes" rows="3" maxlength="1000"></textarea>
-          </div>
-          <div class="field-full">
-            <button class="btn" type="submit" style="width:100%">Prepare WhatsApp Enquiry</button>
-          </div>
-        </div>
-      </form>
-      <p class="status">No payment will be collected through this form.</p>
-    </section>
+<div class="notice">
+  <strong>
+    <i class="fa-solid fa-circle-info"></i>
+    Important information
+  </strong>
+  <br>
+  Package quantities represent campaign goals, not guaranteed
+  followers, likes, subscribers or views. Actual results depend
+  on the platform, audience, content and campaign budget.
+  Advertising spend is separate unless agreed in writing.
+  We do not sell fake engagement or promise guaranteed results.
+</div>
 
-    <section class="card" style="margin-top:25px">
-      <h2>Need help?</h2>
-      <p class="muted">Contact NEGO PROMO to ask about service availability and pricing.</p>
-      <a class="btn" href="https://wa.me/25764699734" target="_blank" rel="noopener noreferrer">Contact on WhatsApp</a>
-    </section>
-  </main>
+<h2 class="section-title" id="services">
+  <i class="fa-solid fa-globe" style="color:#ffd400"></i>
+  Our Promotion Platforms
+</h2>
 
-  <footer>
-    <strong>NEGO PROMO</strong><br>
-    Social Media Promotion · FBu and USD<br>
-    <span>Developed by It Abednego</span>
-  </footer>
+<div class="filters" id="filters">
+  <button class="filter active" data-filter="All">All Platforms</button>
+  <button class="filter" data-filter="Facebook">Facebook</button>
+  <button class="filter" data-filter="Instagram">Instagram</button>
+  <button class="filter" data-filter="TikTok">TikTok</button>
+  <button class="filter" data-filter="YouTube">YouTube</button>
+  <button class="filter" data-filter="Telegram">Telegram</button>
+  <button class="filter" data-filter="WhatsApp">WhatsApp</button>
+  <button class="filter" data-filter="X">X</button>
+  <button class="filter" data-filter="Other">Other Platforms</button>
+</div>
 
-  <script type="module">
-    import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm';
+<div class="grid" id="services-list"></div>
 
-    const SUPABASE_URL = 'https://lysojvuqnfwuiqhapaud.supabase.co';
-    const SUPABASE_PUBLISHABLE_KEY = 'sb_publishable_ceuK-8qKP1aF7Zjv6qFbpA_nCSqjNd9';
+<div class="contact">
+  <h2>
+    <i class="fa-brands fa-whatsapp"
+       style="color:#25d366"></i>
+    Need Help?
+  </h2>
 
-    const supabase = createClient(SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY);
+  <p style="color:#aaa">
+    Contact NEGO PROMO to confirm service availability,
+    package details and the final price.
+  </p>
 
-    const serviceList = document.getElementById('service-list');
-    const serviceStatus = document.getElementById('service-status');
-    const serviceCount = document.getElementById('service-count');
-    const enquirySection = document.getElementById('enquiry');
-    const selectedServiceInput = document.getElementById('selected-service');
-    let services = [];
-    let activePlatform = 'All';
+  <a class="button"
+     style="background:#25d366"
+     href="https://wa.me/25764699734"
+     target="_blank"
+     rel="noopener noreferrer">
 
-    function escapeHtml(value) {
-      return String(value ?? '').replace(/[&<>"']/g, char => ({
-        '&': '&amp;',
-        '<': '&lt;',
-        '>': '&gt;',
-        '"': '&quot;',
-        "'": '&#39;'
-      })[char]);
-    }
+    <i class="fa-brands fa-whatsapp"></i>
+    Contact Support
+  </a>
+</div>
 
-    function formatPrice(service) {
-      const currency = document.getElementById('currency').value;
-      const price = currency === 'FBu' ? service.price_fbu : service.price_usd;
-      const numericPrice = Number(price);
+</main>
 
-      if (!Number.isFinite(numericPrice) || numericPrice <= 0) {
-        return 'Price to be confirmed';
+<footer>
+  <strong>NEGO PROMO</strong>
+  <br>
+  Social Media Promotion Services
+  <br>
+  Developed by It Abednego
+</footer>
+
+<script>
+const WHATSAPP = "25764699734";
+
+/*
+  Starter prices in FBu.
+  These are proposed service fees, not supplier-verified prices.
+  Quantities are campaign goals, not guaranteed results.
+*/
+
+const platforms = [
+  {
+    name: "Facebook",
+    icon: "fa-brands fa-facebook",
+    description: "Promote Facebook posts and pages.",
+    services: [
+      {
+        name: "Page Audience Campaign",
+        unit: "followers",
+        prices: [
+          {quantity: 100, price: 5000},
+          {quantity: 250, price: 10000},
+          {quantity: 500, price: 20000},
+          {quantity: 1000, price: 40000}
+        ]
+      },
+      {
+        name: "Post Engagement Campaign",
+        unit: "likes",
+        prices: [
+          {quantity: 100, price: 5000},
+          {quantity: 250, price: 10000},
+          {quantity: 500, price: 20000},
+          {quantity: 1000, price: 40000}
+        ]
+      },
+      {
+        name: "Video Promotion Campaign",
+        unit: "views",
+        prices: [
+          {quantity: 1000, price: 5000},
+          {quantity: 5000, price: 15000},
+          {quantity: 10000, price: 30000},
+          {quantity: 25000, price: 60000}
+        ]
       }
+    ]
+  },
 
-      return new Intl.NumberFormat('en-US', {
-        style: 'currency',
-        currency: currency === 'FBu' ? 'BIF' : 'USD',
-        maximumFractionDigits: 2
-      }).format(numericPrice);
-    }
+  {
+    name: "Instagram",
+    icon: "fa-brands fa-instagram",
+    description: "Promote Instagram posts and profiles.",
+    services: [
+      {
+        name: "Profile Growth Campaign",
+        unit: "followers",
+        prices: [
+          {quantity: 100, price: 5000},
+          {quantity: 250, price: 10000},
+          {quantity: 500, price: 20000},
+          {quantity: 1000, price: 40000}
+        ]
+      },
+      {
+        name: "Post Engagement Campaign",
+        unit: "likes",
+        prices: [
+          {quantity: 100, price: 5000},
+          {quantity: 250, price: 10000},
+          {quantity: 500, price: 20000},
+          {quantity: 1000, price: 40000}
+        ]
+      },
+      {
+        name: "Reels Promotion Campaign",
+        unit: "views",
+        prices: [
+          {quantity: 1000, price: 5000},
+          {quantity: 5000, price: 15000},
+          {quantity: 10000, price: 30000},
+          {quantity: 25000, price: 60000}
+        ]
+      }
+    ]
+  },
 
-    function renderServices() {
-      const filtered = services.filter(service => {
-        if (activePlatform === 'All') return true;
-        if (activePlatform === 'Other') {
-          return !['Facebook', 'TikTok', 'YouTube', 'Instagram'].includes(service.platform);
+  {
+    name: "TikTok",
+    icon: "fa-brands fa-tiktok",
+    description: "Promote TikTok videos and creator profiles.",
+    services: [
+      {
+        name: "Creator Growth Campaign",
+        unit: "followers",
+        prices: [
+          {quantity: 100, price: 5000},
+          {quantity: 250, price: 10000},
+          {quantity: 500, price: 20000},
+          {quantity: 1000, price: 40000}
+        ]
+      },
+      {
+        name: "Video Engagement Campaign",
+        unit: "likes",
+        prices: [
+          {quantity: 100, price: 5000},
+          {quantity: 250, price: 10000},
+          {quantity: 500, price: 20000},
+          {quantity: 1000, price: 40000}
+        ]
+      },
+      {
+        name: "Video Reach Campaign",
+        unit: "views",
+        prices: [
+          {quantity: 1000, price: 5000},
+          {quantity: 5000, price: 15000},
+          {quantity: 10000, price: 30000},
+          {quantity: 25000, price: 60000}
+        ]
+      }
+    ]
+  },
+
+  {
+    name: "YouTube",
+    icon: "fa-brands fa-youtube",
+    description: "Promote public YouTube videos and channels.",
+    services: [
+      {
+        name: "Channel Growth Campaign",
+        unit: "subscribers",
+        prices: [
+          {quantity: 100, price: 8000},
+          {quantity: 250, price: 20000},
+          {quantity: 500, price: 40000},
+          {quantity: 1000, price: 80000}
+        ]
+      },
+      {
+        name: "Video Discovery Campaign",
+        unit: "views",
+        prices: [
+          {quantity: 1000, price: 8000},
+          {quantity: 5000, price: 20000},
+          {quantity: 10000, price: 40000},
+          {quantity: 25000, price: 80000}
+        ]
+      },
+      {
+        name: "Video Engagement Campaign",
+        unit: "likes",
+        prices: [
+          {quantity: 100, price: 5000},
+          {quantity: 250, price: 12000},
+          {quantity: 500, price: 25000},
+          {quantity: 1000, price: 50000}
+        ]
+      }
+    ]
+  },
+
+  {
+    name: "Telegram",
+    icon: "fa-brands fa-telegram",
+    description: "Promote public Telegram channels and posts.",
+    services: [
+      {
+        name: "Channel Discovery Campaign",
+        unit: "members (goal)",
+        prices: [
+          {quantity: 100, price: 5000},
+          {quantity: 250, price: 10000},
+          {quantity: 500, price: 20000},
+          {quantity: 1000, price: 40000}
+        ]
+      },
+      {
+        name: "Post Promotion Campaign",
+        unit: "views (goal)",
+        prices: [
+          {quantity: 1000, price: 5000},
+          {quantity: 5000, price: 15000},
+          {quantity: 10000, price: 30000},
+          {quantity: 25000, price: 60000}
+        ]
+      }
+    ]
+  },
+
+  {
+    name: "WhatsApp",
+    icon: "fa-brands fa-whatsapp",
+    description: "Promote WhatsApp Business and customer contact.",
+    services: [
+      {
+        name: "Business Setup",
+        unit: "setup",
+        prices: [
+          {quantity: 1, price: 5000}
+        ]
+      },
+      {
+        name: "Customer Reach Campaign",
+        unit: "campaign",
+        prices: [
+          {quantity: 1, price: 5000},
+          {quantity: 2, price: 10000},
+          {quantity: 3, price: 15000}
+        ]
+      }
+    ]
+  },
+
+  {
+    name: "X",
+    icon: "fa-brands fa-x-twitter",
+    description: "Promote public posts and profiles on X.",
+    services: [
+      {
+        name: "Profile Growth Campaign",
+        unit: "followers (goal)",
+        prices: [
+          {quantity: 100, price: 8000},
+          {quantity: 250, price: 20000},
+          {quantity: 500, price: 40000},
+          {quantity: 1000, price: 80000}
+        ]
+      },
+      {
+        name: "Post Engagement Campaign",
+        unit: "likes (goal)",
+        prices: [
+          {quantity: 100, price: 5000},
+          {quantity: 250, price: 12000},
+          {quantity: 500, price: 25000},
+          {quantity: 1000, price: 50000}
+        ]
+      },
+      {
+        name: "Post Discovery Campaign",
+        unit: "views (goal)",
+        prices: [
+          {quantity: 1000, price: 8000},
+          {quantity: 5000, price: 20000},
+          {quantity: 10000, price: 40000}
+        ]
+      }
+    ]
+  },
+
+  {
+    name: "Other",
+    icon: "fa-solid fa-globe",
+    description: "Promotion planning for other online platforms.",
+    services: [
+      {
+        name: "LinkedIn Campaign Setup",
+        unit: "campaign",
+        prices: [
+          {quantity: 1, price: 10000},
+          {quantity: 2, price: 20000}
+        ]
+      },
+      {
+        name: "Twitch Channel Promotion Plan",
+        unit: "campaign",
+        prices: [
+          {quantity: 1, price: 8000},
+          {quantity: 2, price: 16000}
+        ]
+      },
+      {
+        name: "Snapchat Promotion Plan",
+        unit: "campaign",
+        prices: [
+          {quantity: 1, price: 8000},
+          {quantity: 2, price: 16000}
+        ]
+      },
+      {
+        name: "Spotify Artist Promotion Plan",
+        unit: "campaign",
+        prices: [
+          {quantity: 1, price: 10000},
+          {quantity: 2, price: 20000}
+        ]
+      }
+    ]
+  }
+];
+
+const list = document.getElementById("services-list");
+let currentFilter = "All";
+
+function money(value) {
+  return new Intl.NumberFormat("en-US").format(value) + " FBu";
+}
+
+function escapeHTML(value) {
+  return String(value).replace(/[&<>"']/g, char => ({
+    "&": "&amp;",
+    "<": "&lt;",
+    ">": "&gt;",
+    '"': "&quot;",
+    "'": "&#039;"
+  })[char]);
+}
+
+function renderServices() {
+  const selectedPlatforms = platforms.filter(platform =>
+    currentFilter === "All" ||
+    (currentFilter === "Other"
+      ? platform.name === "Other"
+      : platform.name === currentFilter)
+  );
+
+  let html = "";
+
+  selectedPlatforms.forEach(platform => {
+    platform.services.forEach((service, index) => {
+      const options = service.prices.map((item, optionIndex) => `
+        <option value="${optionIndex}">
+          ${item.quantity.toLocaleString()} ${service.unit}
+          — ${money(item.price)}
+        </option>
+      `).join("");
+
+      html += `
+        <article class="card">
+          <div class="platform-icon">
+            <i class="${platform.icon}" aria-hidden="true"></i>
+          </div>
+
+          <h3>${escapeHTML(platform.name)}</h3>
+          <p>${escapeHTML(platform.description)}</p>
+
+          <strong>${escapeHTML(service.name)}</strong>
+
+          <select
+            aria-label="${escapeHTML(service.name)} package"
+            id="package-${platform.name}-${index}">
+            ${options}
+          </select>
+
+          <div class="price"
+            id="price-${platform.name}-${index}">
+            ${money(service.prices[0].price)}
+          </div>
+
+          <button
+            class="button"
+            type="button"
+            onclick="orderPackage(
+              '${platform.name}',
+              ${index},
+              'package-${platform.name}-${index}'
+            )">
+
+            <i class="fa-solid fa-cart-shopping"></i>
+            Request Package
+          </button>
+        </article>
+      `;
+
+      window.setTimeout(() => {
+        const selector = document.getElementById(
+          `package-${platform.name}-${index}`
+        );
+
+        if (selector) {
+          selector.addEventListener("change", () => {
+            const chosen = service.prices[Number(selector.value)];
+
+            document.getElementById(
+              `price-${platform.name}-${index}`
+            ).textContent = money(chosen.price);
+          });
         }
-        return service.platform === activePlatform;
-      });
-
-      serviceList.innerHTML = '';
-
-      if (!filtered.length) {
-        serviceStatus.textContent = services.length
-          ? 'No services match this filter.'
-          : 'No services are currently available. Please check again later or contact us.';
-        serviceCount.textContent = `${services.length} services`;
-        return;
-      }
-
-      serviceStatus.textContent = 'Services retrieved from the NEGO PROMO database.';
-      serviceCount.textContent = `${services.length} services`;
-
-      filtered.forEach(service => {
-        const card = document.createElement('article');
-        card.className = 'service-card';
-        card.innerHTML = `
-          <div class="platform">${escapeHtml(service.platform)}</div>
-          <h3>${escapeHtml(service.name)}</h3>
-          <p>${escapeHtml(service.description || 'Contact us to confirm service details.')}</p>
-          <div class="price">${escapeHtml(formatPrice(service))}</div>
-          <button class="btn" type="button" data-service-id="${escapeHtml(service.id)}">Enquire Now</button>
-        `;
-
-        card.querySelector('button').addEventListener('click', () => {
-          selectedServiceInput.value = service.name;
-          selectedServiceInput.dataset.serviceId = service.id;
-          enquirySection.classList.remove('hidden');
-          enquirySection.scrollIntoView({ behavior: 'smooth' });
-        });
-
-        serviceList.appendChild(card);
-      });
-    }
-
-    async function loadServices() {
-      serviceStatus.textContent = 'Loading available services…';
-
-      const { data, error } = await supabase
-        .from('services')
-        .select('id, name, platform, description, price_fbu, price_usd, active')
-        .eq('active', true)
-        .order('created_at', { ascending: false });
-
-      if (error) {
-        console.error('Service catalogue error:', error.message);
-        serviceStatus.textContent = 'Could not load services. Please try again later or contact support.';
-        serviceCount.textContent = 'Unavailable';
-        return;
-      }
-
-      services = data || [];
-      renderServices();
-    }
-
-    document.getElementById('filters').addEventListener('click', event => {
-      const button = event.target.closest('button[data-platform]');
-      if (!button) return;
-
-      document.querySelectorAll('.filter').forEach(item => item.classList.remove('active'));
-      button.classList.add('active');
-      activePlatform = button.dataset.platform;
-      renderServices();
+      }, 0);
     });
+  });
 
-    document.getElementById('currency').addEventListener('change', renderServices);
+  list.innerHTML = html;
+}
 
-    document.getElementById('close-form').addEventListener('click', () => {
-      enquirySection.classList.add('hidden');
-    });
+function orderPackage(platformName, serviceIndex, selectorId) {
+  const platform = platforms.find(item => item.name === platformName);
 
-    document.getElementById('enquiry-form').addEventListener('submit', event => {
-      event.preventDefault();
+  if (!platform) {
+    alert("Platform not found.");
+    return;
+  }
 
-      const service = services.find(item => item.id === selectedServiceInput.dataset.serviceId);
-      if (!service) {
-        alert('Please select an available service first.');
-        return;
-      }
+  const service = platform.services[serviceIndex];
+  const selector = document.getElementById(selectorId);
+  const chosen = service.prices[Number(selector.value)];
 
-      const name = document.getElementById('customer-name').value.trim();
-      const contact = document.getElementById('customer-contact').value.trim();
-      const target = document.getElementById('target-url').value.trim();
-      const currency = document.getElementById('currency').value;
-      const quantity = Number(document.getElementById('quantity').value);
-      const notes = document.getElementById('customer-notes').value.trim();
+  const target = prompt(
+    "Enter the public link of your page, profile, channel or post:"
+  );
 
-      if (!name || !contact || !target || !Number.isInteger(quantity) || quantity < 1) {
-        alert('Please check that all required details are correct.');
-        return;
-      }
+  if (!target) return;
 
-      let parsedUrl;
-      try {
-        parsedUrl = new URL(target);
-      } catch {
-        alert('Please enter a valid public link.');
-        return;
-      }
+  let validURL;
 
-      if (!['http:', 'https:'].includes(parsedUrl.protocol)) {
-        alert('Please use a valid HTTP or HTTPS link.');
-        return;
-      }
+  try {
+    validURL = new URL(target);
+  } catch {
+    alert("Please enter a valid public link.");
+    return;
+  }
 
-      const message = [
-        'NEGO PROMO — SERVICE ENQUIRY',
-        '',
-        `Name: ${name}`,
-        `Contact: ${contact}`,
-        `Service: ${service.name}`,
-        `Platform: ${service.platform}`,
-        `Target link: ${target}`,
-        `Quantity: ${quantity}`,
-        `Preferred currency: ${currency}`,
-        `Price: To be confirmed`,
-        `Notes: ${notes || 'None'}`,
-        '',
-        'Please confirm availability, final price and delivery estimate.'
-      ].join('\n');
+  if (!["https:", "http:"].includes(validURL.protocol)) {
+    alert("Please enter a valid public link.");
+    return;
+  }
 
-      window.open(
-        'https://wa.me/25764699734?text=' + encodeURIComponent(message),
-        '_blank',
-        'noopener,noreferrer'
-      );
-    });
+  const customerName = prompt("Enter your name:");
 
-    loadServices();
-  </script>
+  if (!customerName) return;
+
+  const message = [
+    "NEGO PROMO — PACKAGE REQUEST",
+    "",
+    "Customer: " + customerName,
+    "Platform: " + platform.name,
+    "Service: " + service.name,
+    "Campaign goal: " +
+      chosen.quantity.toLocaleString() + " " + service.unit,
+    "Starting service fee: " + money(chosen.price),
+    "Public link: " + validURL.href,
+    "",
+    "Please confirm the scope, availability and any separate advertising budget before payment.",
+    "I understand that campaign goals are not guaranteed results."
+  ].join("\n");
+
+  const whatsappURL =
+    "https://wa.me/" + WHATSAPP +
+    "?text=" + encodeURIComponent(message);
+
+  window.open(whatsappURL, "_blank", "noopener,noreferrer");
+}
+
+document.getElementById("filters").addEventListener("click", event => {
+  const button = event.target.closest("[data-filter]");
+
+  if (!button) return;
+
+  currentFilter = button.dataset.filter;
+
+  document.querySelectorAll(".filter").forEach(item => {
+    item.classList.toggle("active", item === button);
+  });
+
+  renderServices();
+});
+
+renderServices();
+</script>
+
 </body>
 </html>

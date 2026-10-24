@@ -1,252 +1,543 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#111111">
-<title>NEGO PROMO | Social Media Marketing Panel</title>
-<style>
-:root {
-  --bg:#f4f6fa;
-  --card:#ffffff;
-  --dark:#171717;
-  --yellow:#ffcc00;
-  --text:#252936;
-  --muted:#72798a;
-  --border:#e6e9f0;
-  --green:#20a464;
-}
-*{box-sizing:border-box}
-body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text)}
-a{text-decoration:none;color:inherit}
-button,input,select{font:inherit}
-.topbar{background:var(--dark);color:#fff;padding:15px 5%;display:flex;justify-content:space-between;align-items:center;gap:15px}
-.brand{font-size:22px;font-weight:900;letter-spacing:.5px}
-.brand span{color:var(--yellow)}
-.top-actions{display:flex;gap:9px;align-items:center}
-.btn{border:0;border-radius:8px;padding:11px 16px;font-weight:700;cursor:pointer;display:inline-block;text-align:center}
-.btn-yellow{background:var(--yellow);color:#171717}
-.btn-outline{border:1px solid #555;color:white;background:transparent}
-.layout{display:grid;grid-template-columns:220px minmax(0,1fr);max-width:1250px;margin:24px auto;padding:0 18px;gap:22px}
-.sidebar,.card{background:var(--card);border:1px solid var(--border);border-radius:13px}
-.sidebar{padding:17px;height:max-content}
-.side-title{font-weight:800;margin:4px 8px 16px}
-.nav-item{display:block;padding:12px 11px;border-radius:8px;margin:4px 0;color:#555e70;font-weight:600}
-.nav-item.active,.nav-item:hover{background:#fff5c9;color:#252525}
-main{min-width:0}
-.welcome{background:var(--dark);color:#fff;border-radius:15px;padding:26px;margin-bottom:20px;position:relative;overflow:hidden}
-.welcome h1{margin:0 0 10px;font-size:clamp(24px,4vw,36px)}
-.welcome h1 span{color:var(--yellow)}
-.welcome p{color:#e0e0e0;line-height:1.6;max-width:590px}
-.badge{display:inline-block;background:#343434;color:var(--yellow);padding:7px 10px;border-radius:20px;font-size:12px;font-weight:800;margin-bottom:12px}
-.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px;margin-bottom:20px}
-.stat{padding:17px}
-.stat small{color:var(--muted)}
-.stat strong{display:block;font-size:23px;margin-top:8px}
-.card{padding:20px;margin-bottom:18px}
-.card h2{font-size:19px;margin:0 0 8px}
-.muted{color:var(--muted);font-size:14px;line-height:1.6}
-.platforms{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:16px}
-.platform{border:1px solid var(--border);border-radius:10px;padding:15px 10px;text-align:center;background:#fff}
-.platform .icon{font-size:25px;display:block;margin-bottom:8px}
-.platform strong{font-size:14px}
-.platform small{display:block;color:var(--muted);margin-top:6px;font-size:12px}
-form{display:grid;gap:13px}
-label{font-weight:700;font-size:13px;display:block;margin-bottom:7px}
-input,select{width:100%;padding:13px;border:1px solid #dce0e8;border-radius:8px;background:#fff;color:#222}
-input:focus,select:focus{outline:2px solid #ffe57a;border-color:#e1b800}
-.form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.full{width:100%}
-.notice{background:#fff8d9;border:1px solid #f2e3a1;padding:13px;border-radius:9px;color:#5e5015;font-size:13px;line-height:1.6}
-.hidden{display:none!important}
-.service-list{display:grid;gap:10px;margin-top:14px}
-.service-row{display:flex;justify-content:space-between;gap:12px;align-items:center;border:1px solid var(--border);padding:13px;border-radius:9px}
-.service-row span{font-size:13px;color:var(--muted)}
-footer{text-align:center;padding:25px 15px;color:var(--muted);font-size:13px}
-.whatsapp{position:fixed;right:17px;bottom:18px;background:#20b968;color:white;padding:14px 17px;border-radius:30px;font-weight:800;box-shadow:0 5px 18px #0002;z-index:5}
-.mobile-menu{display:none}
-@media(max-width:760px){
- .topbar{padding:14px 16px}.brand{font-size:19px}
- .top-actions .btn{padding:9px 11px;font-size:12px}
- .layout{display:block;margin:14px auto;padding:0 12px}
- .sidebar{display:none;margin-bottom:14px}
- .sidebar.show{display:block}
- .mobile-menu{display:inline-block}
- .grid{grid-template-columns:1fr 1fr}
- .platforms{grid-template-columns:repeat(2,minmax(0,1fr))}
- .welcome{padding:21px}
- .card{padding:16px}
- .form-row{grid-template-columns:1fr}
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101010">
+  <title>NEGO PROMO | Social Media Promotion</title>
+  <meta name="description" content="NEGO PROMO — Social media promotion for creators and businesses.">
+  <style>
+    :root {
+      --bg: #0c0d10;
+      --panel: #17191e;
+      --yellow: #ffd43b;
+      --text: #f7f7f7;
+      --muted: #a7aab3;
+      --border: #30323a;
+      --green: #27c984;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+    }
+
+    button, input, select, textarea { font: inherit; }
+
+    a { color: inherit; text-decoration: none; }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(12,13,16,.96);
+      border-bottom: 1px solid var(--border);
+      padding: 15px 5%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 15px;
+    }
+
+    .brand {
+      font-size: 22px;
+      font-weight: 900;
+      letter-spacing: 1px;
+    }
+
+    .brand span { color: var(--yellow); }
+
+    .badge {
+      background: #29250f;
+      border: 1px solid #65531a;
+      color: var(--yellow);
+      border-radius: 30px;
+      padding: 6px 11px;
+      font-size: 12px;
+    }
+
+    main { max-width: 1120px; margin: auto; padding: 28px 5% 60px; }
+
+    .hero {
+      padding: 42px 0 30px;
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      align-items: center;
+      gap: 25px;
+    }
+
+    .eyebrow {
+      color: var(--yellow);
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 12px;
+    }
+
+    h1 {
+      font-size: clamp(34px, 6vw, 58px);
+      line-height: 1.08;
+      margin: 12px 0;
+    }
+
+    h1 span { color: var(--yellow); }
+
+    .muted { color: var(--muted); }
+
+    .hero-card, .card {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 22px;
+    }
+
+    .hero-card strong { color: var(--yellow); font-size: 22px; }
+
+    .section-head {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      margin: 28px 0 16px;
+    }
+
+    h2 { margin: 0; font-size: 25px; }
+
+    .filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      margin-bottom: 18px;
+    }
+
+    .filter {
+      background: var(--panel);
+      color: var(--text);
+      border: 1px solid var(--border);
+      border-radius: 25px;
+      padding: 9px 14px;
+      cursor: pointer;
+    }
+
+    .filter.active {
+      color: #111;
+      background: var(--yellow);
+      border-color: var(--yellow);
+      font-weight: bold;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 15px;
+    }
+
+    .service-card {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 18px;
+      display: flex;
+      flex-direction: column;
+      min-height: 210px;
+    }
+
+    .platform {
+      font-size: 12px;
+      color: var(--yellow);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .service-card h3 { margin: 9px 0 4px; }
+
+    .service-card p {
+      color: var(--muted);
+      font-size: 14px;
+      flex: 1;
+    }
+
+    .price { font-weight: bold; font-size: 19px; }
+
+    .btn {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      border: 0;
+      border-radius: 10px;
+      padding: 12px 16px;
+      cursor: pointer;
+      font-weight: bold;
+      background: var(--yellow);
+      color: #101010;
+    }
+
+    .btn:disabled { opacity: .5; cursor: not-allowed; }
+
+    .btn-outline {
+      color: var(--text);
+      background: transparent;
+      border: 1px solid var(--border);
+    }
+
+    .service-card .btn { margin-top: 12px; width: 100%; }
+
+    .notice {
+      border: 1px solid #5b4d1c;
+      background: #201d12;
+      color: #f2e6b3;
+      padding: 14px;
+      border-radius: 12px;
+      font-size: 13px;
+      margin: 18px 0;
+    }
+
+    .status { color: var(--muted); font-size: 14px; }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    label { display: block; font-size: 13px; margin-bottom: 6px; color: var(--muted); }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 12px;
+      border-radius: 9px;
+      color: var(--text);
+      background: #0f1014;
+      border: 1px solid var(--border);
+      outline: none;
+    }
+
+    input:focus, select:focus, textarea:focus { border-color: var(--yellow); }
+
+    .field-full { grid-column: 1 / -1; }
+
+    .hidden { display: none !important; }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 28px 5%;
+      text-align: center;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    footer strong { color: var(--yellow); }
+
+    @media (max-width: 760px) {
+      .hero { grid-template-columns: 1fr; padding-top: 25px; }
+      .services { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+
+    @media (max-width: 480px) {
+      .services, .form-grid { grid-template-columns: 1fr; }
+      .field-full { grid-column: auto; }
+      header { padding: 13px 4%; }
+      main { padding-left: 4%; padding-right: 4%; }
+    }
+  </style>
 </head>
 <body>
-
-<header class="topbar">
-  <a class="brand" href="#" onclick="showPage('home');return false">NEGO <span>PROMO</span></a>
-  <div class="top-actions">
-    <button class="btn btn-outline mobile-menu" onclick="toggleMenu()">☰ Menu</button>
-    <button class="btn btn-outline" onclick="showPage('login')">Sign In</button>
-    <button class="btn btn-yellow" onclick="showPage('register')">Register</button>
-  </div>
-</header>
-
-<div class="layout">
-  <aside class="sidebar" id="sidebar">
-    <div class="side-title">NEGO PROMO PANEL</div>
-    <a class="nav-item active" href="#" onclick="showPage('home');return false">⌂ &nbsp; Home</a>
-    <a class="nav-item" href="#" onclick="showPage('services');return false">▤ &nbsp; Services</a>
-    <a class="nav-item" href="#" onclick="showPage('order');return false">＋ &nbsp; New Order</a>
-    <a class="nav-item" href="#" onclick="showPage('login');return false">⇥ &nbsp; Sign In</a>
-    <a class="nav-item" href="#" onclick="showPage('register');return false">♙ &nbsp; Create Account</a>
-    <a class="nav-item" href="https://wa.me/25764699734" target="_blank" rel="noopener">☏ &nbsp; WhatsApp Support</a>
-  </aside>
+  <header>
+    <a class="brand" href="#">NEGO <span>PROMO</span></a>
+    <span class="badge">PROMOTE YOUR BRAND</span>
+  </header>
 
   <main>
-    <section id="page-home">
-      <div class="welcome">
-        <span class="badge">SOCIAL MEDIA MARKETING PANEL</span>
-        <h1>Grow Your Brand with <span>NEGO PROMO</span></h1>
-        <p>One place to discover social media promotion services for creators, businesses and brands. Explore our service categories and contact our team for assistance.</p>
-        <button class="btn btn-yellow" onclick="showPage('services')">Explore Services →</button>
-        <button class="btn btn-outline" onclick="showPage('register')">Create Account</button>
+    <section class="hero">
+      <div>
+        <div class="eyebrow">Your growth starts here</div>
+        <h1>Promote your content.<br><span>Reach your audience.</span></h1>
+        <p class="muted">
+          Promotion services for creators, entrepreneurs and businesses.
+          Explore available services and submit an enquiry.
+        </p>
+        <a href="#services" class="btn">Explore Services</a>
       </div>
 
-      <div class="grid">
-        <div class="card stat"><small>Platforms</small><strong>7+</strong><small>Social networks</small></div>
-        <div class="card stat"><small>Support</small><strong>WhatsApp</strong><small>Talk to our team</small></div>
-        <div class="card stat"><small>Access</small><strong>24/7</strong><small>Browse services anytime</small></div>
-      </div>
-
-      <div class="card">
-        <h2>Explore Platforms</h2>
-        <p class="muted">Find promotion options for your favourite social platforms.</p>
-        <div class="platforms">
-          <div class="platform"><span class="icon">📘</span><strong>Facebook</strong><small>Page & business promotion</small></div>
-          <div class="platform"><span class="icon">🎵</span><strong>TikTok</strong><small>Creator discovery</small></div>
-          <div class="platform"><span class="icon">▶️</span><strong>YouTube</strong><small>Channel promotion</small></div>
-          <div class="platform"><span class="icon">📸</span><strong>Instagram</strong><small>Brand visibility</small></div>
-          <div class="platform"><span class="icon">✈️</span><strong>Telegram</strong><small>Community growth</small></div>
-          <div class="platform"><span class="icon">𝕏</span><strong>X</strong><small>Content discovery</small></div>
-          <div class="platform"><span class="icon">💬</span><strong>WhatsApp</strong><small>Business communication</small></div>
-          <div class="platform"><span class="icon">🌐</span><strong>More</strong><small>Ask our team</small></div>
-        </div>
-      </div>
-
-      <div class="card">
-        <h2>How It Works</h2>
-        <div class="service-list">
-          <div class="service-row"><div><strong>01. Explore services</strong><br><span>Browse available promotion options.</span></div><span>→</span></div>
-          <div class="service-row"><div><strong>02. Contact our team</strong><br><span>Confirm service details and pricing.</span></div><span>→</span></div>
-          <div class="service-row"><div><strong>03. Confirm your order</strong><br><span>We will explain the next steps before payment.</span></div><span>→</span></div>
-        </div>
+      <div class="hero-card">
+        <div class="eyebrow">NEGO PROMO</div>
+        <h2 style="margin:10px 0">Built for creators and businesses</h2>
+        <p class="muted">Choose a service that matches your goals. Availability, price and delivery details must be confirmed before an order is accepted.</p>
+        <strong>FBu · USD</strong>
       </div>
     </section>
 
-    <section id="page-services" class="hidden">
-      <div class="card">
-        <h2>Our Services</h2>
-        <p class="muted">Contact us to confirm current availability, delivery method and price. We focus on legitimate promotion and reaching genuine audiences.</p>
-        <div class="service-list">
-          <div class="service-row"><div><strong>Facebook Promotion</strong><br><span>Promote a page, post or business.</span></div><button class="btn btn-yellow" onclick="askService('Facebook Promotion')">Enquire</button></div>
-          <div class="service-row"><div><strong>TikTok Promotion</strong><br><span>Content discovery and creator promotion.</span></div><button class="btn btn-yellow" onclick="askService('TikTok Promotion')">Enquire</button></div>
-          <div class="service-row"><div><strong>YouTube Promotion</strong><br><span>Channel and video promotion.</span></div><button class="btn btn-yellow" onclick="askService('YouTube Promotion')">Enquire</button></div>
-          <div class="service-row"><div><strong>Instagram Promotion</strong><br><span>Brand and content discovery.</span></div><button class="btn btn-yellow" onclick="askService('Instagram Promotion')">Enquire</button></div>
-          <div class="service-row"><div><strong>Telegram Community</strong><br><span>Promote a community to relevant audiences.</span></div><button class="btn btn-yellow" onclick="askService('Telegram Community Promotion')">Enquire</button></div>
-          <div class="service-row"><div><strong>Business Promotion</strong><br><span>Help your brand reach potential customers.</span></div><button class="btn btn-yellow" onclick="askService('Business Promotion')">Enquire</button></div>
-        </div>
+    <div class="notice">
+      <strong>Important:</strong> Only services activated by the administrator will appear here.
+      An enquiry is not a confirmed order, and payment is not currently enabled.
+    </div>
+
+    <section id="services">
+      <div class="section-head">
+        <h2>Available Services</h2>
+        <span id="service-count" class="status">Loading services…</span>
       </div>
+
+      <div class="filters" id="filters">
+        <button class="filter active" data-platform="All">All</button>
+        <button class="filter" data-platform="Facebook">Facebook</button>
+        <button class="filter" data-platform="TikTok">TikTok</button>
+        <button class="filter" data-platform="YouTube">YouTube</button>
+        <button class="filter" data-platform="Instagram">Instagram</button>
+        <button class="filter" data-platform="Other">Other</button>
+      </div>
+
+      <div id="service-status" class="status" role="status">Connecting to the service catalogue…</div>
+      <div id="service-list" class="services"></div>
     </section>
 
-    <section id="page-order" class="hidden">
-      <div class="card">
-        <h2>Request a New Order</h2>
-        <p class="muted">This starter version sends your request to WhatsApp for confirmation. It does not automatically charge or process orders.</p>
-        <form onsubmit="sendOrder(event)">
-          <div><label for="platform">Choose a platform</label>
-            <select id="platform" required>
-              <option value="">Select platform</option>
-              <option>Facebook</option><option>TikTok</option><option>YouTube</option>
-              <option>Instagram</option><option>Telegram</option><option>X</option><option>Business Promotion</option>
+    <section id="enquiry" class="card hidden" style="margin-top:30px">
+      <div class="section-head">
+        <h2>Service Enquiry</h2>
+        <button id="close-form" class="btn btn-outline" type="button">Close</button>
+      </div>
+      <p class="muted">Submit an enquiry. We will prepare a WhatsApp message so you can discuss availability and the final price.</p>
+
+      <form id="enquiry-form">
+        <div class="form-grid">
+          <div>
+            <label for="customer-name">Your name</label>
+            <input id="customer-name" required maxlength="100" autocomplete="name">
+          </div>
+          <div>
+            <label for="customer-contact">WhatsApp or email</label>
+            <input id="customer-contact" required maxlength="150">
+          </div>
+          <div class="field-full">
+            <label for="selected-service">Selected service</label>
+            <input id="selected-service" readonly required>
+          </div>
+          <div class="field-full">
+            <label for="target-url">Public post, page or video link</label>
+            <input id="target-url" type="url" placeholder="https://…" required maxlength="2000">
+          </div>
+          <div>
+            <label for="currency">Preferred currency</label>
+            <select id="currency" required>
+              <option value="FBu">FBu</option>
+              <option value="USD">USD</option>
             </select>
           </div>
-          <div><label for="service">What do you want to promote?</label><input id="service" placeholder="Example: my video, page or business" required></div>
-          <div><label for="link">Public link to your content</label><input id="link" type="url" placeholder="https://..." required></div>
-          <div><label for="details">Order details</label><input id="details" placeholder="Tell us your goals" required></div>
-          <button class="btn btn-yellow full" type="submit">Send Request on WhatsApp</button>
-        </form>
-      </div>
+          <div>
+            <label for="quantity">Quantity (if applicable)</label>
+            <input id="quantity" type="number" min="1" max="100000" value="1" required>
+          </div>
+          <div class="field-full">
+            <label for="customer-notes">What would you like to promote?</label>
+            <textarea id="customer-notes" rows="3" maxlength="1000"></textarea>
+          </div>
+          <div class="field-full">
+            <button class="btn" type="submit" style="width:100%">Prepare WhatsApp Enquiry</button>
+          </div>
+        </div>
+      </form>
+      <p class="status">No payment will be collected through this form.</p>
     </section>
 
-    <section id="page-login" class="hidden">
-      <div class="card">
-        <h2>Welcome Back</h2>
-        <p class="muted">Contact support for help with account access.</p>
-        <div class="notice">Account login is not connected yet. Do not enter or send any password on this demo page.</div>
-        <p><a class="btn btn-yellow full" href="https://wa.me/25764699734?text=Hello%20NEGO%20PROMO%2C%20I%20need%20help%20with%20account%20access." target="_blank" rel="noopener">Contact Support</a></p>
-        <p class="muted">New here? <a href="#" onclick="showPage('register');return false"><strong>Create an account request</strong></a></p>
-      </div>
-    </section>
-
-    <section id="page-register" class="hidden">
-      <div class="card">
-        <h2>Create Your Account</h2>
-        <p class="muted">Send an account request to our team. Online account creation will be added when the secure account system is connected.</p>
-        <form onsubmit="registerRequest(event)">
-          <div><label for="fullname">Your name</label><input id="fullname" required placeholder="Enter your name"></div>
-          <div><label for="email">Email address (optional)</label><input id="email" type="email" placeholder="you@example.com"></div>
-          <button class="btn btn-yellow full" type="submit">Request Account via WhatsApp</button>
-        </form>
-      </div>
+    <section class="card" style="margin-top:25px">
+      <h2>Need help?</h2>
+      <p class="muted">Contact NEGO PROMO to ask about service availability and pricing.</p>
+      <a class="btn" href="https://wa.me/25764699734" target="_blank" rel="noopener noreferrer">Contact on WhatsApp</a>
     </section>
   </main>
-</div>
 
-<footer>
-  <strong>NEGO PROMO</strong> · Social Media Promotion<br>
-  Contact: +257 64 699 734<br>
-  Developed by It Abednego · © <span id="year"></span>
-</footer>
+  <footer>
+    <strong>NEGO PROMO</strong><br>
+    Social Media Promotion · FBu and USD<br>
+    <span>Developed by It Abednego</span>
+  </footer>
 
-<a class="whatsapp" href="https://wa.me/25764699734?text=Hello%20NEGO%20PROMO%2C%20I%20need%20information%20about%20your%20services." target="_blank" rel="noopener">☏ WhatsApp</a>
+  <script type="module">
+    import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm';
 
-<script>
-document.getElementById('year').textContent = new Date().getFullYear();
+    const SUPABASE_URL = 'https://lysojvuqnfwuiqhapaud.supabase.co';
+    const SUPABASE_PUBLISHABLE_KEY = 'sb_publishable_ceuK-8qKP1aF7Zjv6qFbpA_nCSqjNd9';
 
-function showPage(page){
-  document.querySelectorAll('main section').forEach(section=>section.classList.add('hidden'));
-  const target=document.getElementById('page-'+page);
-  if(target) target.classList.remove('hidden');
-  document.querySelectorAll('.nav-item').forEach(link=>link.classList.remove('active'));
-  const sidebar=document.getElementById('sidebar');
-  if(window.innerWidth<=760) sidebar.classList.remove('show');
-  window.scrollTo({top:0,behavior:'smooth'});
-}
-function toggleMenu(){document.getElementById('sidebar').classList.toggle('show')}
-function askService(service){
-  const text='Hello NEGO PROMO, I would like to ask about: '+service;
-  window.open('https://wa.me/25764699734?text='+encodeURIComponent(text),'_blank');
-}
-function sendOrder(event){
-  event.preventDefault();
-  const platform=document.getElementById('platform').value;
-  const service=document.getElementById('service').value;
-  const link=document.getElementById('link').value;
-  const details=document.getElementById('details').value;
-  const message='NEGO PROMO ORDER REQUEST%0APlatform: '+encodeURIComponent(platform)+
-    '%0AService: '+encodeURIComponent(service)+
-    '%0ALink: '+encodeURIComponent(link)+
-    '%0ADetails: '+encodeURIComponent(details);
-  window.open('https://wa.me/25764699734?text='+message,'_blank');
-}
-function registerRequest(event){
-  event.preventDefault();
-  const name=document.getElementById('fullname').value;
-  const email=document.getElementById('email').value||'Not provided';
-  const message='Hello NEGO PROMO, I would like to request an account.%0AName: '+
-    encodeURIComponent(name)+'%0AEmail: '+encodeURIComponent(email);
-  window.open('https://wa.me/25764699734?text='+message,'_blank');
-}
-</script>
+    const supabase = createClient(SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY);
+
+    const serviceList = document.getElementById('service-list');
+    const serviceStatus = document.getElementById('service-status');
+    const serviceCount = document.getElementById('service-count');
+    const enquirySection = document.getElementById('enquiry');
+    const selectedServiceInput = document.getElementById('selected-service');
+    let services = [];
+    let activePlatform = 'All';
+
+    function escapeHtml(value) {
+      return String(value ?? '').replace(/[&<>"']/g, char => ({
+        '&': '&amp;',
+        '<': '&lt;',
+        '>': '&gt;',
+        '"': '&quot;',
+        "'": '&#39;'
+      })[char]);
+    }
+
+    function formatPrice(service) {
+      const currency = document.getElementById('currency').value;
+      const price = currency === 'FBu' ? service.price_fbu : service.price_usd;
+      const numericPrice = Number(price);
+
+      if (!Number.isFinite(numericPrice) || numericPrice <= 0) {
+        return 'Price to be confirmed';
+      }
+
+      return new Intl.NumberFormat('en-US', {
+        style: 'currency',
+        currency: currency === 'FBu' ? 'BIF' : 'USD',
+        maximumFractionDigits: 2
+      }).format(numericPrice);
+    }
+
+    function renderServices() {
+      const filtered = services.filter(service => {
+        if (activePlatform === 'All') return true;
+        if (activePlatform === 'Other') {
+          return !['Facebook', 'TikTok', 'YouTube', 'Instagram'].includes(service.platform);
+        }
+        return service.platform === activePlatform;
+      });
+
+      serviceList.innerHTML = '';
+
+      if (!filtered.length) {
+        serviceStatus.textContent = services.length
+          ? 'No services match this filter.'
+          : 'No services are currently available. Please check again later or contact us.';
+        serviceCount.textContent = `${services.length} services`;
+        return;
+      }
+
+      serviceStatus.textContent = 'Services retrieved from the NEGO PROMO database.';
+      serviceCount.textContent = `${services.length} services`;
+
+      filtered.forEach(service => {
+        const card = document.createElement('article');
+        card.className = 'service-card';
+        card.innerHTML = `
+          <div class="platform">${escapeHtml(service.platform)}</div>
+          <h3>${escapeHtml(service.name)}</h3>
+          <p>${escapeHtml(service.description || 'Contact us to confirm service details.')}</p>
+          <div class="price">${escapeHtml(formatPrice(service))}</div>
+          <button class="btn" type="button" data-service-id="${escapeHtml(service.id)}">Enquire Now</button>
+        `;
+
+        card.querySelector('button').addEventListener('click', () => {
+          selectedServiceInput.value = service.name;
+          selectedServiceInput.dataset.serviceId = service.id;
+          enquirySection.classList.remove('hidden');
+          enquirySection.scrollIntoView({ behavior: 'smooth' });
+        });
+
+        serviceList.appendChild(card);
+      });
+    }
+
+    async function loadServices() {
+      serviceStatus.textContent = 'Loading available services…';
+
+      const { data, error } = await supabase
+        .from('services')
+        .select('id, name, platform, description, price_fbu, price_usd, active')
+        .eq('active', true)
+        .order('created_at', { ascending: false });
+
+      if (error) {
+        console.error('Service catalogue error:', error.message);
+        serviceStatus.textContent = 'Could not load services. Please try again later or contact support.';
+        serviceCount.textContent = 'Unavailable';
+        return;
+      }
+
+      services = data || [];
+      renderServices();
+    }
+
+    document.getElementById('filters').addEventListener('click', event => {
+      const button = event.target.closest('button[data-platform]');
+      if (!button) return;
+
+      document.querySelectorAll('.filter').forEach(item => item.classList.remove('active'));
+      button.classList.add('active');
+      activePlatform = button.dataset.platform;
+      renderServices();
+    });
+
+    document.getElementById('currency').addEventListener('change', renderServices);
+
+    document.getElementById('close-form').addEventListener('click', () => {
+      enquirySection.classList.add('hidden');
+    });
+
+    document.getElementById('enquiry-form').addEventListener('submit', event => {
+      event.preventDefault();
+
+      const service = services.find(item => item.id === selectedServiceInput.dataset.serviceId);
+      if (!service) {
+        alert('Please select an available service first.');
+        return;
+      }
+
+      const name = document.getElementById('customer-name').value.trim();
+      const contact = document.getElementById('customer-contact').value.trim();
+      const target = document.getElementById('target-url').value.trim();
+      const currency = document.getElementById('currency').value;
+      const quantity = Number(document.getElementById('quantity').value);
+      const notes = document.getElementById('customer-notes').value.trim();
+
+      if (!name || !contact || !target || !Number.isInteger(quantity) || quantity < 1) {
+        alert('Please check that all required details are correct.');
+        return;
+      }
+
+      let parsedUrl;
+      try {
+        parsedUrl = new URL(target);
+      } catch {
+        alert('Please enter a valid public link.');
+        return;
+      }
+
+      if (!['http:', 'https:'].includes(parsedUrl.protocol)) {
+        alert('Please use a valid HTTP or HTTPS link.');
+        return;
+      }
+
+      const message = [
+        'NEGO PROMO — SERVICE ENQUIRY',
+        '',
+        `Name: ${name}`,
+        `Contact: ${contact}`,
+        `Service: ${service.name}`,
+        `Platform: ${service.platform}`,
+        `Target link: ${target}`,
+        `Quantity: ${quantity}`,
+        `Preferred currency: ${currency}`,
+        `Price: To be confirmed`,
+        `Notes: ${notes || 'None'}`,
+        '',
+        'Please confirm availability, final price and delivery estimate.'
+      ].join('\n');
+
+      window.open(
+        'https://wa.me/25764699734?text=' + encodeURIComponent(message),
+        '_blank',
+        'noopener,noreferrer'
+      );
+    });
+
+    loadServices();
+  </script>
 </body>
 </html>

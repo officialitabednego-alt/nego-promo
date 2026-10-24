@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#090909">
+<meta name="description" content="NEGO PROMO - Social Media Marketing and Promotion Services.">
+<title>NEGO PROMO | Social Media Growth</title>
+
+<style>
+:root {
+  --bg: #090909;
+  --panel: #151515;
+  --yellow: #ffd400;
+  --text: #ffffff;
+  --muted: #a8a8a8;
+  --border: #292929;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+header {
+  min-height: 72px;
+  padding: 16px 6%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--border);
+  background: #0c0c0c;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  color: var(--yellow);
+  font-size: 23px;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+.logo span {
+  color: white;
+}
+
+nav {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+nav a {
+  font-size: 13px;
+  color: #ddd;
+}
+
+nav a:hover {
+  color: var(--yellow);
+}
+
+.btn {
+  display: inline-block;
+  background: var(--yellow);
+  color: #111;
+  padding: 12px 20px;
+  border-radius: 7px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.btn:hover {
+  opacity: 0.88;
+}
+
+.btn-outline {
+  border: 1px solid var(--yellow);
+  color: var(--yellow);
+  background: transparent;
+}
+
+.hero {
+  padding: 75px 6% 65px;
+  text-align: center;
+  background:
+    radial-gradient(ellipse at top, #292100 0%, #090909 62%);
+}
+
+.badge {
+  display: inline-block;
+  color: var(--yellow);
+  border: 1px solid #6c5900;
+  background: #201a00;
+  padding: 6px 13px;
+  border-radius: 30px;
+  font-size: 12px;
+  margin-bottom: 20px;
+}
+
+.hero h1 {
+  font-size: clamp(34px, 7vw, 60px);
+  line-height: 1.12;
+  max-width: 850px;
+  margin: 0 auto 20px;
+}
+
+.hero h1 span {
+  color: var(--yellow);
+}
+
+.hero p {
+  color: #bbb;
+  max-width: 590px;
+  margin: 0 auto 28px;
+  font-size: 16px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+section {
+  padding: 55px 6%;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.section-heading h2 {
+  font-size: 29px;
+  margin-bottom: 8px;
+}
+
+.section-heading h2 span {
+  color: var(--yellow);
+}
+
+.section-heading p {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.stat {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 22px 10px;
+  text-align: center;
+}
+
+.stat strong {
+  display: block;
+  color: var(--yellow);
+  font-size: 22px;
+}
+
+.stat small {
+  color: var(--muted);
+}
+
+.platforms {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.platform {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 13px;
+  padding: 23px 17px;
+  transition: .2s;
+}
+
+.platform:hover {
+  border-color: var(--yellow);
+  transform: translateY(-3px);
+}
+
+.platform .icon {
+  font-size: 30px;
+  margin-bottom: 8px;
+}
+
+.platform h3 {
+  font-size: 17px;
+  margin-bottom: 5px;
+}
+
+.platform p {
+  font-size: 13px;
+  color: var(--muted);
+  margin-bottom: 15px;
+}
+
+.platform a {
+  color: var(--yellow);
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.services {
+  background: #0e0e0e;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.service {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 22px;
+}
+
+.service h3 {
+  margin-bottom: 8px;
+  font-size: 17px;
+}
+
+.service p {
+  color: var(--muted);
+  font-size: 13px;
+  margin-bottom: 15px;
+}
+
+.service .label {
+  color: var(--yellow);
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.how-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.step {
+  border: 1px solid var(--border);
+  background: var(--panel);
+  padding: 23px;
+  border-radius: 12px;
+}
+
+.step-number {
+  display: inline-flex;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  background: var(--yellow);
+  color: #111;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+.step p {
+  color: var(--muted);
+  font-size: 13px;
+  margin-top: 6px;
+}
+
+.cta {
+  text-align: center;
+  background: linear-gradient(135deg, #201a00, #101010);
+  border: 1px solid #554600;
+  border-radius: 16px;
+  padding: 38px 20px;
+}
+
+.cta h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.cta p {
+  color: #bbb;
+  margin-bottom: 22px;
+}
+
+footer {
+  padding: 28px 6%;
+  text-align: center;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 12px;
+}
+
+footer strong {
+  color: var(--yellow);
+}
+
+@media (max-width: 700px) {
+  header {
+    padding: 15px 5%;
+  }
+
+  .logo {
+    font-size: 19px;
+  }
+
+  nav {
+    gap: 10px;
+  }
+
+  nav a {
+    font-size: 11px;
+  }
+
+  nav .btn {
+    padding: 9px 10px;
+    font-size: 11px;
+  }
+
+  .hero {
+    padding: 60px 5%;
+  }
+
+  section {
+    padding: 42px 5%;
+  }
+
+  .platforms,
+  .service-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .how-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stats {
+    gap: 8px;
+  }
+
+  .stat strong {
+    font-size: 18px;
+  }
+
+  .stat small {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 390px) {
+  nav {
+    gap: 7px;
+  }
+
+  nav a {
+    font-size: 10px;
+  }
+
+  .platforms,
+  .service-grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <a href="#" class="logo">NEGO <span>PROMO.</span></a>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#platforms">Platforms</a>
+    <a href="#services">Services</a>
+    <a href="#contact" class="btn">Get Started</a>
+  </nav>
+</header>
+
+<main>
+
+<section class="hero" id="home">
+  <div class="badge">YOUR SOCIAL MEDIA GROWTH PARTNER</div>
+
+  <h1>Grow Your Brand.<br><span>Reach More People.</span></h1>
+
+  <p>
+    Discover social media promotion services designed to help
+    creators, businesses and brands reach real audiences.
+  </p>
+
+  <div class="hero-buttons">
+    <a href="#services" class="btn">Explore Services →</a>
+    <a href="#platforms" class="btn btn-outline">View Platforms</a>
+  </div>
+</section>
+
+<section>
+  <div class="stats">
+    <div class="stat">
+      <strong>Multi-Platform</strong>
+      <small>Social Media Services</small>
+    </div>
+
+    <div class="stat">
+      <strong>24/7</strong>
+      <small>Online Service Access</small>
+    </div>
+
+    <div class="stat">
+      <strong>Burundi 🇧🇮</strong>
+      <small>Our Starting Market</small>
+    </div>
+  </div>
+</section>
+
+<section id="platforms">
+  <div class="section-heading">
+    <h2>Choose Your <span>Platform</span></h2>
+    <p>Explore the platforms available for promotion.</p>
+  </div>
+
+  <div class="platforms">
+
+    <article class="platform">
+      <div class="icon">📘</div>
+      <h3>Facebook</h3>
+      <p>Promote business pages, posts and video content.</p>
+      <a href="#services">Explore Services →</a>
+    </article>
+
+    <article class="platform">
+      <div class="icon">🎵</div>
+      <h3>TikTok</h3>
+      <p>Promote videos and reach potential new audiences.</p>
+      <a href="#services">Explore Services →</a>
+    </article>
+
+    <article class="platform">
+      <div class="icon">▶️</div>
+      <h3>YouTube</h3>
+      <p>Promote videos and help audiences discover your channel.</p>
+      <a href="#services">Explore Services →</a>
+    </article>
+
+    <article class="platform">
+      <div class="icon">📸</div>
+      <h3>Instagram</h3>
+      <p>Promote Reels, content and your business profile.</p>
+      <a href="#services">Explore Services →</a>
+    </article>
+
+    <article class="platform">
+      <div class="icon">✈️</div>
+      <h3>Telegram</h3>
+      <p>Promote channels, communities and announcements.</p>
+      <a href="#services">Explore Services →</a>
+    </article>
+
+    <article class="platform">
+      <div class="icon">𝕏</div>
+      <h3>X</h3>
+      <p>Promote posts and increase content discovery.</p>
+      <a href="#services">Explore Services →</a>
+    </article>
+
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="section-heading">
+    <h2>Our <span>Services</span></h2>
+    <p>Choose a promotion service that fits your goals.</p>
+  </div>
+
+  <div class="service-grid">
+
+    <article class="service">
+      <div class="label">CONTENT PROMOTION</div>
+      <h3>Video Promotion</h3>
+      <p>Help your videos reach relevant audiences through compliant promotional campaigns.</p>
+    </article>
+
+    <article class="service">
+      <div class="label">AUDIENCE GROWTH</div>
+      <h3>Creator Promotion</h3>
+      <p>Promote your creator profile to people who may be interested in your content.</p>
+    </article>
+
+    <article class="service">
+      <div class="label">BUSINESS GROWTH</div>
+      <h3>Page Promotion</h3>
+      <p>Help businesses introduce their pages and services to potential customers.</p>
+    </article>
+
+    <article class="service">
+      <div class="label">ENGAGEMENT</div>
+      <h3>Campaign Management</h3>
+      <p>Plan promotional campaigns to improve genuine audience engagement.</p>
+    </article>
+
+    <article class="service">
+      <div class="label">CREATIVE SERVICES</div>
+      <h3>Post & Poster Design</h3>
+      <p>Create promotional graphics and content for businesses and creators.</p>
+    </article>
+
+    <article class="service">
+      <div class="label">MUSIC PROMOTION</div>
+      <h3>Artist Promotion</h3>
+      <p>Help musicians promote releases and connect with potential listeners.</p>
+    </article>
+
+  </div>
+</section>
+
+<section>
+  <div class="section-heading">
+    <h2>How It <span>Works</span></h2>
+    <p>A simple process for your promotion needs.</p>
+  </div>
+
+  <div class="how-grid">
+    <article class="step">
+      <div class="step-number">1</div>
+      <h3>Choose a Service</h3>
+      <p>Select the promotional service that fits your goals.</p>
+    </article>
+
+    <article class="step">
+      <div class="step-number">2</div>
+      <h3>Submit Your Request</h3>
+      <p>Provide the public link and campaign details requested.</p>
+    </article>
+
+    <article class="step">
+      <div class="step-number">3</div>
+      <h3>Track Your Order</h3>
+      <p>Follow up with the NEGO PROMO team for service updates.</p>
+    </article>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="cta">
+    <h2>Ready to Grow with <span style="color:#ffd400">NEGO PROMO?</span></h2>
+
+    <p>
+      We are building a social media promotion platform
+      for businesses, creators and brands.
+    </p>
+
+    <a class="btn"
+       href="mailto:negopromo@example.com?subject=NEGO%20PROMO%20Service%20Inquiry">
+       Contact Our Team
+    </a>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <p><strong>NEGO PROMO</strong> — Your Growth, Our Mission.</p>
+  <p>© 2026 NEGO PROMO. All rights reserved.</p>
+  <p>Developed by It Abednego.</p>
+</footer>
+
+</body>
+  </html>
